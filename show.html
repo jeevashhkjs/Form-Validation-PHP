@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show All Datas</title>
+</head>
+<body>
+    <div class="container">
+            <table>
+                <tr>
+                        <td>S.NO</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Website</td>
+                        <td>Address</td>
+                        <td>Mail</td>
+                        <td>Gender</td>
+                </tr>
+                <?php foreach($fetchAllDatas as $fetchAll): ?>
+                <tr>
+                    <td><?php echo $fetchAll -> id ?></td>
+                    <td><?php echo $fetchAll -> name ?></td>
+                    <td><?php echo $fetchAll -> lastName ?></td>
+                    <td><?php echo $fetchAll -> website ?></td>
+                    <td><?php echo $fetchAll -> address ?></td>
+                    <td><?php echo $fetchAll -> mail ?></td>
+                    <td><?php echo $fetchAll -> gender ?></td>
+                    <td>
+                        <form action="./edit.php" method="post">
+                            <input hidden value="<?php echo $fetchAll ->id ?>" name="ids">
+                            <button name="submit" type="sbumit" value="2">Edit</button></td>
+                        </form>
+                    </td>  
+                    <td>
+                        <form action="./delete.php" method="post">
+                            <input  value="<?php echo $fetchAll ->id ?>" name="ids"> 
+                            <button >delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+    </div>
+</body>
+</html>
