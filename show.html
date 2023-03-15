@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <title>Show All Datas</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
             <table>
-                <tr>
+                <tr class="heading">
                         <td>S.NO</td>
                         <td>First Name</td>
                         <td>Last Name</td>
@@ -14,6 +15,8 @@
                         <td>Address</td>
                         <td>Mail</td>
                         <td>Gender</td>
+                        <td>Edit Action</td>
+                        <td>Delete Action</td>
                 </tr>
                 <?php foreach($fetchAllDatas as $fetchAll): ?>
                 <tr>
@@ -27,13 +30,13 @@
                     <td>
                         <form action="./edit.php" method="post">
                             <input hidden value="<?php echo $fetchAll ->id ?>" name="ids">
-                            <button name="submit" type="sbumit" value="2">Edit</button></td>
+                            <button name="submit" type="sbumit" value="2" class="editBtn">Edit</button></td>
                         </form>
                     </td>  
                     <td>
                         <form action="./delete.php" method="post">
                             <input hidden  value="<?php echo $fetchAll ->id ?>" name="ids"> 
-                            <button >delete</button>
+                            <button class="editBtn">delete</button>
                         </form>
                     </td>
                 </tr>

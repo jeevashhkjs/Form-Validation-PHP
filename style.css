@@ -4,3 +4,101 @@ a{
 label{
     display: block;
 }
+body {
+    background-color: #f4f4ff;
+}
+a {
+    display: block;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    margin-top: 21px;
+    width: 93px;
+    padding: 16px 41px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: solid 2px #0efb2c;
+}
+#submit {
+    display: block;
+    margin-top: 20px;
+    padding: 13px 92px;
+    font-size: 15px;
+    color: white;
+    background-color: blue;
+    border: 0;
+    border: solid 2px #0efb2c;
+    border-radius: 9px;
+}
+#submit:hover{
+    color: blue;
+    background-color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+a:hover{
+    color: blue;
+    background-color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.registerForm {
+    margin-top: 27px;
+    background-color: #6e6eff;
+    width: 390px;
+    padding-left: 58px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    margin-left: 429px;
+    box-shadow: 0px 2px 25px 1px blue;
+    border-radius: 14px;
+}
+label {
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.editBtn{
+        height: 40px;
+        border: solid 2px #0efb2c;
+        width: 100px;
+        font-size: 20px;
+        background-color: blue;
+        color: white;
+        border-radius: 7px;
+}
+.editBtn:hover{
+    color: blue;
+    background-color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+table{
+    border: solid 2px blue;
+    box-shadow: 2px 2px 10px 6px lightblue;
+    border-collapse: collapse;
+}
+td {
+    border: solid 1px blue;
+    padding: 14px 12px;
+    font-size: 19px;
+    border-collapse: collapse;
+}
+.common {
+    padding: 6px 25px;
+    border: solid 2px blue;
+    border-radius: 7px;
+}
+textarea{
+    width: 287px;
+    height: 56px;
+    border: solid 2px blue;
+}
+p#alert {
+    color: white;
+    text-align: center;
+    font-size: 19px;
+    margin: 0;
+}

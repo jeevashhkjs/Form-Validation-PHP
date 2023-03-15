@@ -8,24 +8,27 @@
 
 <body>
     <div class="container">
-        <form action="./register.php" method="post">
+
+        <form action="./register.php" class="registerForm common check" method="post">
+            <p id="alert"> Your Data successfully inserted</p>
             <label>Name</label>
-            <input type="text" name="fname" id="fname" class="fname">
+            <input type="text" name="fname" id="fname" class="fname common check"><p name="fnameerr"></p>
             <label>Last Name</label>
-            <input type="text" name="lname" id="lname" class="lname">
+            <input type="text" name="lname" id="lname" class="lname common check"><p name="lnameerr"></p>
             <label>Email</label>
-            <input type="emial" name="mail" id="mail" class="mail">
+            <input type="emial" name="mail" id="mail" class="mail common check"><p name="mailerr"></p>
             <label>Website</label>
-            <input type="text" name="web" id="web" class="web">
+            <input type="text" name="web" id="web" class="web common check"><p name="weberr"></p>
             <label>Address</label>
-            <textarea name="address"></textarea>
+            <textarea name="address" class="check addres"></textarea><p name="adderr"></p>
             <label>Gender</label>
             <input type="radio" name="gender" id="gender" class="gender" value="male">Male
             <input type="radio" name="gender" id="gender" class="gender" value="female">Female
             <input type="radio" name="gender" id="gender" class="gender" value="transgender">Transgender
-            <button>Submit</button>
+            <button id="submit">Submit</button>
         </form>
     </div>
+    <script src="./jas.js"></script>
 </body>
 
 </html>
