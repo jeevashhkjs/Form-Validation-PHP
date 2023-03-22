@@ -8,6 +8,9 @@ $mail = $_POST['mail'];
 $web = $_POST['web'];
 $address = $_POST['address'];
 $gender = $_POST['gender'];
+$UserName = $_POST['UserName'];
+echo $UserName;
+$Password = $_POST['Password'];
 
 $fnameeror = $_POST['fnameerr'];
 $lnameerr = $_POST['lnameerr'];
@@ -25,7 +28,7 @@ try{
 try{
 
     if($name !="" && $lname !="" && $mail !="" && $web !="" && $address !="" && $gender !=""){
-        $sql = $conn -> prepare("INSERT INTO employees (name,lastName,mail,website,address,gender) value ('$name','$lname','$mail','$web','$address','$gender')");
+        $sql = $conn -> prepare("INSERT INTO employees (name,lastName,mail,website,address,gender,username,passwod) value ('$name','$lname','$mail','$web','$address','$gender','$UserName','$Password')");
         $sql -> execute();
     }
     else{
@@ -34,7 +37,7 @@ try{
     
 
 }catch(Exception $e){
-    echo "Recorded not ok";
+    echo "Recorded not ok".$e->getMessage();
 }
 
 try{
@@ -43,7 +46,7 @@ try{
     $fetch -> execute();
 
     $values = $fetch -> fetchAll(PDO::FETCH_OBJ);
-    header("location:./register.html");
+    // header("location:./register.html");
 
 }catch(Exception $e){
     echo "no record found error";

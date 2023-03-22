@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+label {
+    display: block;
+    padding-top: 30px;
+    color: blue;
+    font-size: 25px;
+    text-align:right;
+}
+input{
+    border: solid 2px #49ffea;
+    padding: 8px 15px;
+    font-size: 20px;
+    margin-top: 1px;
+}
+form {
+    background-color: #c1c1d9;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 31px;
+    margin: auto;
+    box-shadow: 7px 7px 7px 3px gray;
+}
+label {
+    display: block;
+    padding-top: 30px;
+    color: blue;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 200px;
+}
+button {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 7px 70px;
+    margin-top: 8px;
+    background-color: blue;
+    color: white;
+    font-family: cursive;
+    font-size: 14px;
+}

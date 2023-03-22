@@ -10,5 +10,7 @@ mail varchar(255),
 website varchar(255),
 address varchar(255),
 gender varchar(255),
+username varchar(255),
+passwod varchar(255),
 primary key(id)
 )

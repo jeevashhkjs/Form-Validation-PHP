@@ -2,14 +2,12 @@
 require 'connection.php';
 
 $targetId = $_POST['ids'];
-echo $targetId;
 
 try{
     $Datafull = $conn->prepare("SELECT * FROM employees WHERE id = $targetId");
     $Datafull->execute();
 
     $fetchDatas = $Datafull -> fetchAll(PDO :: FETCH_OBJ);
-    print_r($fetchDatas);
 }catch(Exception $e){
     echo "edit error";
 }
@@ -21,7 +19,7 @@ try{
 <html lang="en">
 <head>
     <title>Edit Page</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./edit.css">
 </head>
 <body>
     <div class="container">
