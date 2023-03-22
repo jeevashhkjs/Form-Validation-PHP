@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Log In Page</title>
+    <link rel="stylesheet" href="./edit.css">
 </head>
 <body>
     <div class="container">
@@ -10,8 +11,16 @@
             <input type="text" name="userInput" class="username"/>
             <label>Password</label>
             <input type="text" name="pasd" class="pasd" />
-            <button>Submit</button>
+            <button>Log In</button>
+            <br><br>
+            <a href="./index.html">Home Page</a>
         </form>
+        <?php foreach($fetchAllDatas as $fetchAll): ?>
+        <form action="./out.php" method="post">
+            <input type="text" hidden name="siId" value="<?php echo $fetchAll ->id ?>"/>
+            <button>Sign out</button>
+        </form>
+        <?php endforeach; ?>
     </div>
 </body>
 </html> 

@@ -1,9 +1,7 @@
 <?php
     require 'connection.php';
  $user = $_POST['userInput'];
- echo $user;
  $pasd = $_POST['pasd'];
- echo  $pasd;
 
  try{
     $check = $conn -> prepare("SELECT * FROM employees where username =  '$user' and passwod = '$pasd' ");

@@ -43,3 +43,12 @@ button {
     font-family: cursive;
     font-size: 14px;
 }
+
+
+a {
+    background-color: blue;
+    padding: 11px 32px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}

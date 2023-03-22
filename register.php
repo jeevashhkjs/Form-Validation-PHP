@@ -27,14 +27,35 @@ try{
 }
 try{
 
-    if($name !="" && $lname !="" && $mail !="" && $web !="" && $address !="" && $gender !=""){
-        $sql = $conn -> prepare("INSERT INTO employees (name,lastName,mail,website,address,gender,username,passwod) value ('$name','$lname','$mail','$web','$address','$gender','$UserName','$Password')");
-        $sql -> execute();
+    $alldatas = $conn->prepare("SELECT * FROM employees WHERE mail = '$mail'");
+    $alldatas->execute();
+
+    $userdata = $conn->prepare("SELECT * FROM employees WHERE username = '$UserName'");
+    $userdata->execute();
+
+    $maildata = $alldatas -> fetchAll(PDO::FETCH_OBJ);
+    $user = $userdata -> fetchAll(PDO::FETCH_OBJ);
+
+    print_r($maildata);
+
+    if($maildata == []){
+        if($user == []){
+            if($name !="" && $lname !="" && $mail !="" && $web !="" && $address !="" && $gender !=""){
+                $sql = $conn -> prepare("INSERT INTO employees (name,lastName,mail,website,address,gender,username,passwod) value ('$name','$lname','$mail','$web','$address','$gender','$UserName','$Password')");
+                $sql -> execute();
+            }
+            else{
+                echo "Please enter value";
+            }
+        }
+        else{
+            echo "username already taken";
+        }
+
     }
     else{
-        echo "Please enter value";
+        echo "account is already taken";
     }
-    
 
 }catch(Exception $e){
     echo "Recorded not ok".$e->getMessage();

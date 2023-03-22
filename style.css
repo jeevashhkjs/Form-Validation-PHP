@@ -102,3 +102,10 @@ p#alert {
     font-size: 19px;
     margin: 0;
 }
+a {
+    background-color: blue;
+    padding: 11px 32px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
